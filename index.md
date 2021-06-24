@@ -1,10 +1,61 @@
-## Welcome to GitHub Pages
+# 欢迎来到Alex的个人页面
 
-You can use the [editor on GitHub](https://github.com/Alexzihaohu/Alexzihaohu.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+## 教育经历
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### 墨尔本大学
 
-### Markdown
+数据科学硕士(Master of Data Science) [加权: 81/100 (Highest level)]
+
+### 江西财经大学
+
+经济统计学(拔尖人才实验班) [加权: 87.3/100，学院排名22/300+] 
+
+## 技能
+
+计算机水平: 熟练使用Python，SQL，JavaScript，HTML，CSS，ArcGIS Pro软件，Microsoft Office软件
+
+语言水平: TOEFL 93/120, GRE 324/340
+
+其他: CFA一级，证券从业资格证
+
+## 实习经历
+### 中国科学院先进技术研究院（工程与科学计算研究室）研究助理实习生	2020年5月 – 2021年4月 深圳
+- 项目描述: 基于TensorFlow深度学习框架，将卷积神经网络与传统的区域分解算法（ domain decomposition method）结合用以拟合偏微分方程，目的在于寻找一种较于传统数值方法（例如有限元方法）更高效的拟合偏微分方程的方法。可用于流体的模拟（计算纳维-斯托克斯方程的数值解）。
+- 相关算法复现: 研读并复现了近几年提出的神经网络解偏微分方程的一些算法如Physics-informed neural networks（PINN）、NFSnets（链接: https://github.com/Alexzihaohu/NSFnets）。
+- 模型构建与训练: 在PINN的基础上结合传统区域分解算法进行创新。将整个模拟区域分为若干子区域，每个子区域上使用一个小规模神经网络进行训练，将小网络拼接为大规模神经网络用以求得整个模拟区域的偏微分方程的数值解。模型构建成功后，使用SLURM作业调度系统将模型部署在中科曙光超算上进行训练。拟合结果优于PINN算法。
+### 国金证券（质控部）实习生	2017年12月–2018年2月 上海
+- 协助完成IPO项目有关数据的统计、分析与反馈，建立完善审核数据库与案例库。
+- 协助审核IPO立项文件、质控文件及其他投行业务文件，主要审核文件中的统计图表。
+- 协助完成质控部初审报告、反馈意见、预审表、回访报告等文件的整理归档工作。
+### 国务院发展研究中心信息中心 实习生	2015年9月 - 2016年6月 江西，北京
+- 参与中国智库网功能测试、进行在线答疑提供技术上的支持、负责数据统计报告撰写工作。
+- 对新加入的成员进行业务培训，帮助成员熟悉业务，解决成员工作中遇到的问题。
+
+## 课题研究
+
+### Twitterlance: Fitness Analysis for Australia（基于云计算的澳洲居民健康分析）	2021年4月 - 2021年5月
+- 项目描述: 在墨尔本大学Melbourne Research Cloud（PaaS平台）上开发并部署一套大数据获取、存储、分析以及展示的分布式可扩展系统。使用Python通过Twitter APIs爬取并处理澳洲各大城市的推特数据，存入云上部署的CouchDB数据库。使用Spark以及CouchDB自带的View对大数据进行MapReduce分析。通过前端网页展示分析结果。系统的后台基于Django框架，整合所有资源。使用Ansible进行自动部署，所有的服务封装在Docker容器中，并使用Docker Swarm进行负载均衡。
+- 数据采集分析: 使用Python通过Twitter APIs爬取各大城市用户发送的推文并打上城市标签，其中通过Search API爬取历史推文，Stream API获取即时推文。获取了超过44000个用户的1050万条推文，以JSON格式存储在CouchDB数据库中。在CouchDB中写JavaScript进行MapReduce统计各个城市中不同时间段发送含有特定关键词推文的频率。
+- 前端架构: 使用HTML、Bootstrap设计网页的框架，使用CSS控制网页元素样式。使用JavaScript、Chart.js、Apache ECharts、Mapbox进行数据图表以及地图绘制。通过jQuery的AJAX控制数据采集任务以及获取统计数据。
+- 自动部署: 使用Ansible自动部署云端的虚拟机，批量设置虚拟机的镜像文件、CPU、RAM、ROM、端口等。
+- 视频展示: https://youtu.be/574I-g7GSGI项目报告：https://www.overleaf.com/read/kfkynyjjpjkk 
+### 墨尔本大学与澳大利亚气象局合作项目	2021年4月 – 2021年11月
+- 项目描述: 基于local binary with dual-template（LBDT）算法开发一套自动识别雷达信号中阵风锋的系统。
+- 数据预处理: 从澳大利亚气象局获取多普勒雷达数据，使用Python的Pyart包将雷达信号转为三维数组结构，对连续的数据进行离散化，以便于之后的处理。
+- 模型构建: 使用LBDT模型筛选出雷达信号中的疑似辐合线信号，根据阵风锋的特征设置一系列规则对信号进行筛选及调整。最后使用光流法（optical flow method）判断雷达信号是否为阵风锋。
+
+## 获奖经历
+### 奖学金: 
+- 学习标兵 [一年加权成绩达到90/100]	2017年 10 月
+- 三好学生 [一年加权成绩在学院排名前10%]	2015年 10 月
+### 竞赛:
+- 第四届“华创杯”市场调查大赛 省一等奖	2016年 12 月 
+- 首届大学生互联网金融应用创新大赛 全国三等奖	2015年 11 月
+
+
+
+
+
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
